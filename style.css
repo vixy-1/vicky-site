@@ -1,0 +1,62 @@
+/* 画面全体のスタイル */
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background: #f8f9fa;
+}
+
+/* 🔹 ナビゲーションバー */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0078ff;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 ボタン */
+.login-btn,
+.main-btn {
+  background-color: white;
+  color: #0078ff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-btn:hover,
+.main-btn:hover {
+  background-color: #e6f0ff;
+}
+
+/* 🔹 メイン部分 */
+.main {
+  text-align: center;
+  margin-top: 100px;
+}
