@@ -1,8 +1,12 @@
-/* 画面全体のスタイル */
+/* 🌐 全体設定 */
 body {
   margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
-  background: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 🔹 ナビゲーションバー */
@@ -10,53 +14,145 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0078ff;
-  color: white;
-  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 30px;
+  -webkit-backdrop-filter: blur(10px); /* Safari対応は先に書く */
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 1.4em;
+  font-size: 1.5rem;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
+  gap: 25px;
 }
 
-.nav-links a {
-  color: white;
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+.nav-links li a:hover {
+  color: #ffd700;
 }
 
-/* 🔹 ボタン */
-.login-btn,
-.main-btn {
-  background-color: white;
-  color: #0078ff;
+.login-btn {
+  background: #ffd700;
+  color: #333;
   border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.login-btn:hover,
-.main-btn:hover {
-  background-color: #e6f0ff;
+.login-btn:hover {
+  background: #fff;
 }
 
-/* 🔹 メイン部分 */
+/* 🔹 メインコンテンツ */
 .main {
   text-align: center;
   margin-top: 100px;
+  flex-grow: 1;
+}
+
+.main h2 {
+  font-size: 2.5rem;
+}
+
+.main p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.main-btn {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  background: #ffd700;
+}
+
+/* 🔹 ログインページ */
+.login-page {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #232526, #414345);
+  flex-direction: column;
+}
+
+/* 🔸 ログインボックス */
+.login-box {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  width: 320px;
+  -webkit-backdrop-filter: blur(10px); /* Safari対応は先に */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.login-box button {
+  width: 100%;
+  background: #ffd700;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #fff;
+}
+
+/* 🔹 フッター */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }

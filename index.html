@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vicky Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 🔹 ナビゲーションバー -->
+  <!-- 🔹 ナビバー -->
   <nav class="navbar">
     <h1 class="logo">vickySite</h1>
     <ul class="nav-links">
@@ -16,16 +16,33 @@
       <li><a href="#">お問い合わせ</a></li>
     </ul>
     <button class="login-btn" id="loginBtn">ログイン</button>
+    <button class="login-btn" id="logoutBtn" style="display:none;">ログアウト</button>
   </nav>
 
-  <!-- 🔹 メインコンテンツ -->
-  <section class="main">
+  <!-- 🔹 メインページ -->
+  <section class="main" id="homePage">
     <h2>ようこそ！</h2>
-    <p>このサイトはVS Codeで作られました。</p>
+    <p>このサイトはVS CodeとFirebaseで作られました。</p>
     <button class="main-btn" id="infoBtn">詳細を見る</button>
   </section>
 
-  <script src="script.js"></script>
+  <!-- 🔹 ログインページ -->
+  <section class="login-page" id="loginPage">
+    <div class="login-box">
+      <h2>ログイン</h2>
+      <input type="email" id="email" placeholder="メールアドレス" />
+      <input type="password" id="password" placeholder="パスワード" />
+      <button id="loginSubmit">ログイン</button>
+      <p style="margin-top:15px;">アカウントがない？ <a href="#" id="signupLink">新規登録</a></p>
+      <p id="loginMsg" style="margin-top:10px;color:#ffd700;"></p>
+    </div>
+  </section>
+
+  <!-- 🔹 フッター -->
+  <footer>
+    <p>© 2025 Vicky Site. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
-
