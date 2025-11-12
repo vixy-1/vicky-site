@@ -9,6 +9,38 @@ body {
   flex-direction: column;
 }
 
+/* フェード表示用ユーティリティ */
+.fade-enter { opacity: 0; transition: opacity .25s ease; }
+.fade-enter-active { opacity: 1; }
+.fade-exit { opacity: 1; transition: opacity .2s ease; }
+.fade-exit-active { opacity: 0; }
+
+/* スピナーオーバーレイ */
+#pageSpinner {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.25);
+  z-index: 200;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+#pageSpinner.active { display: flex; }
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-top-color: #ffd700;
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
 /* 🔹 ナビゲーションバー */
 .navbar {
   display: flex;

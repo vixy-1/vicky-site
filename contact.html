@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ | Vicky Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">vickySite</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="#">サービス</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+      <li><a href="privacy.html">プライバシーポリシー</a></li>
+      <li><a href="terms.html">利用規約</a></li>
+    </ul>
+    <button class="login-btn" onclick="location.href='login.html'">ログイン</button>
+  </nav>
+
+  <section class="main" style="max-width:720px;margin:80px auto 40px;padding:0 16px;">
+    <h2>お問い合わせ</h2>
+    <p>ご質問やご相談は以下のフォームから送信してください。</p>
+    <form action="mailto:v1xy@outlook.jp" method="post" enctype="text/plain" style="display:grid;gap:12px;margin-top:20px;">
+      <label>お名前
+        <input type="text" name="name" required style="width:100%;padding:10px;border-radius:8px;border:none;" />
+      </label>
+      <label>メールアドレス
+        <input type="email" name="email" required style="width:100%;padding:10px;border-radius:8px;border:none;" />
+      </label>
+      <label>件名
+        <input type="text" name="subject" required style="width:100%;padding:10px;border-radius:8px;border:none;" />
+      </label>
+      <label>内容
+        <textarea name="message" rows="6" required style="width:100%;padding:10px;border-radius:8px;border:none;"></textarea>
+      </label>
+      <button type="submit" class="main-btn">送信</button>
+    </form>
+    <p style="margin-top:10px;font-size:0.9rem;opacity:0.9;">メールソフトが起動して送信されます。スパム防止のため、返信までお時間をいただく場合があります。</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Vicky Site. All rights reserved. | <a href="contact.html" style="color:#ffd700;text-decoration:none;">お問い合わせ</a> | <a href="privacy.html" style="color:#ffd700;text-decoration:none;">プライバシーポリシー</a> | <a href="terms.html" style="color:#ffd700;text-decoration:none;">利用規約</a></p>
+  </footer>
+</body>
+</html>

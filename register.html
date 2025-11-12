@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//www.gstatic.com">
+  <link rel="preconnect" href="https://www.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="//www.googleapis.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://hcaptcha.com https://*.hcaptcha.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.hcaptcha.com; connect-src 'self' https://www.googleapis.com https://www.gstatic.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://hcaptcha.com https://*.hcaptcha.com; frame-src 'self' https://hcaptcha.com https://*.hcaptcha.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; upgrade-insecure-requests">
+  <title>新規登録 | Vicky Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+  <div id="pageSpinner" role="status" aria-live="polite" aria-label="処理中">
+    <div class="spinner" aria-hidden="true"></div>
+  </div>
+  <nav class="navbar">
+    <h1 class="logo">vickySite</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="#">サービス</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+      <li><a href="privacy.html">プライバシーポリシー</a></li>
+      <li><a href="terms.html">利用規約</a></li>
+    </ul>
+    <button class="login-btn" onclick="location.href='index.html'">ログイン</button>
+  </nav>
+
+  <section class="main" style="max-width:420px;margin:80px auto 40px;padding:0 16px;text-align:left;">
+    <h2 style="text-align:center;">新規登録</h2>
+    <label>メールアドレス
+      <input type="email" id="regEmail" placeholder="your@email" required style="width:100%;padding:10px;border-radius:8px;border:none;" />
+    </label>
+    <label>パスワード（8文字以上・英字と数字を含む）
+      <input type="password" id="regPassword" placeholder="••••••••" required style="width:100%;padding:10px;border-radius:8px;border:none;" />
+    </label>
+    <label>パスワード（確認）
+      <input type="password" id="regPassword2" placeholder="••••••••" required style="width:100%;padding:10px;border-radius:8px;border:none;" />
+    </label>
+    <div class="h-captcha" data-sitekey="4b300ec6-2536-4e84-88d4-464450307bf4" id="register-captcha" style="margin:10px 0 14px;"></div>
+    <button id="registerSubmit" class="main-btn" style="width:100%;">登録する</button>
+    <p id="registerMsg" style="margin-top:10px;color:#ffd700;" aria-live="polite"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Vicky Site. All rights reserved. | <a href="contact.html" style="color:#ffd700;text-decoration:none;">お問い合わせ</a> | <a href="privacy.html" style="color:#ffd700;text-decoration:none;">プライバシーポリシー</a> | <a href="terms.html" style="color:#ffd700;text-decoration:none;">利用規約</a></p>
+  </footer>
+
+  <script type="module" src="register.js"></script>
+</body>
+</html>

@@ -3,17 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//www.gstatic.com">
+  <link rel="preconnect" href="https://www.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="//www.googleapis.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://hcaptcha.com https://*.hcaptcha.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.hcaptcha.com; connect-src 'self' https://www.googleapis.com https://www.gstatic.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://hcaptcha.com https://*.hcaptcha.com; frame-src 'self' https://hcaptcha.com https://*.hcaptcha.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; upgrade-insecure-requests">
   <title>Vicky Website</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
+  <div id="pageSpinner" role="status" aria-live="polite" aria-label="処理中">
+    <div class="spinner" aria-hidden="true"></div>
+  </div>
   <!-- 🔹 ナビバー -->
   <nav class="navbar">
     <h1 class="logo">vickySite</h1>
     <ul class="nav-links">
       <li><a href="#">ホーム</a></li>
       <li><a href="#">サービス</a></li>
-      <li><a href="#">お問い合わせ</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+      <li><a href="privacy.html">プライバシーポリシー</a></li>
+      <li><a href="terms.html">利用規約</a></li>
+      <li><a href="register.html">新規登録</a></li>
     </ul>
     <button class="login-btn" id="loginBtn">ログイン</button>
     <button class="login-btn" id="logoutBtn" style="display:none;">ログアウト</button>
@@ -32,15 +44,16 @@
       <h2>ログイン</h2>
       <input type="email" id="email" placeholder="メールアドレス" />
       <input type="password" id="password" placeholder="パスワード" />
+      <div class="h-captcha" data-sitekey="4b300ec6-2536-4e84-88d4-464450307bf4" id="login-captcha" style="margin:10px auto;"></div>
       <button id="loginSubmit">ログイン</button>
-      <p style="margin-top:15px;">アカウントがない？ <a href="#" id="signupLink">新規登録</a></p>
-      <p id="loginMsg" style="margin-top:10px;color:#ffd700;"></p>
+      <p style="margin-top:15px;">アカウントがない？ <a href="register.html" id="signupLink">新規登録</a></p>
+      <p id="loginMsg" style="margin-top:10px;color:#ffd700;" aria-live="polite"></p>
     </div>
   </section>
 
   <!-- 🔹 フッター -->
   <footer>
-    <p>© 2025 Vicky Site. All rights reserved.</p>
+    <p>© 2025 Vicky Site. All rights reserved. | <a href="contact.html" style="color:#ffd700;text-decoration:none;">お問い合わせ</a> | <a href="privacy.html" style="color:#ffd700;text-decoration:none;">プライバシーポリシー</a> | <a href="terms.html" style="color:#ffd700;text-decoration:none;">利用規約</a></p>
   </footer>
 
   <script type="module" src="script.js"></script>
